@@ -13,22 +13,40 @@ import cv2
 # Get a reference to webcam #0 (the default one)
 video_capture = cv2.VideoCapture(0)
 
-# Load a sample picture and learn how to recognize it.
-obama_image = face_recognition.load_image_file("obama.jpg")
-obama_face_encoding = face_recognition.face_encodings(obama_image)[0]
+# Load a sample picture of JUSTIN and learn how to recognize it.
+justin_image = face_recognition.load_image_file("justin.jpg")
+justin_face_encoding = face_recognition.face_encodings(justin_image)[0]
 
-# Load a second sample picture and learn how to recognize it.
-biden_image = face_recognition.load_image_file("biden.jpg")
-biden_face_encoding = face_recognition.face_encodings(biden_image)[0]
+# Load a second sample of DEVLEENA picture and learn how to recognize it.
+devleena_image = face_recognition.load_image_file("Devleena.jpeg")
+devleena_face_encoding = face_recognition.face_encodings(devleena_image)[0]
+
+# Load a sample picture of LANDAN and learn how to recognize it.
+landan_image = face_recognition.load_image_file("landan.jpg")
+landan_face_encoding = face_recognition.face_encodings(landan_image)[0]
+
+# Load a sample picture of ALBERTO and learn how to recognize it.
+alberto_image = face_recognition.load_image_file("alberto.jpeg")
+alberto_face_encoding = face_recognition.face_encodings(alberto_image)[0]
+
+# Load a sample picture of ADAM and learn how to recognize it.
+adam_image = face_recognition.load_image_file("adam.jpeg")
+adam_face_encoding = face_recognition.face_encodings(adam_image)[0]
 
 # Create arrays of known face encodings and their names
 known_face_encodings = [
-    obama_face_encoding,
-    biden_face_encoding
+    justin_face_encoding,
+    devleena_face_encoding,
+    landan_face_encoding,
+    alberto_face_encoding,
+    adam_face_encoding
 ]
 known_face_names = [
-    "Barack Obama",
-    "Joe Biden"
+    "Devleena",
+    "justin",
+    "landan",
+    "alberto",
+    "adam"
 ]
 
 # Initialize some variables
